@@ -1,4 +1,5 @@
-## Welcome to GitHub Pages
+## Image Classification - Without Deep Nets
+# Colin Butkus
 
 You can use the [editor on GitHub](https://github.com/cbutkus/CS766/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
