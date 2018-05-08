@@ -16,7 +16,7 @@ My goal was two fold. One, learn about and then implement the models that were c
 
 ## Dataset to Benchmark Model Performance
  
- For this project I made use of publicly available data set CIFAR-10 of labeled images. [link](https://www.cs.toronto.edu/~kriz/cifar.html) The dataset contains 10 classes (shown in image below), 50,000 images for training (32x32 color images), 10,000 images for testing (32x32 color images).
+ For this project I made use of publicly available data set [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) of labeled images. The dataset contains 10 classes (shown in image below), 50,000 images for training (32x32 color images), 10,000 images for testing (32x32 color images).
 
 ![Image](https://cbutkus.github.com/CS766/CIFAR-10.png)
  
@@ -28,7 +28,8 @@ My goal was two fold. One, learn about and then implement the models that were c
 
 ## Image Classification Framework
 
-The process works as follows. Collect a large dataset of images with labels attached to them. In this case we are using the CIFAR-10 dataset.
+The process works as follows. Collect a large dataset of images with labels attached to them. In this case we are using the CIFAR-10 dataset. You extract features from your dataset. That is for each image create a 1-D vector of numbers that "describes" the image. You then break up your data into a training set and test set. The trainning set is used to tune your model. The test set is only used at the end to measure how well the model you trainned actually predicts the correct label on a image that was never scene before by the model.
+
 ![Image](https://cbutkus.github.com/CS766/ClassificationOverview.png)
 
 
