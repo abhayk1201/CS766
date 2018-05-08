@@ -28,7 +28,7 @@ My goal was two fold. One, learn about and then implement the models that were c
 
 ## Image Classification Framework
 
-
+![Image](https://cbutkus.github.com/CS766/ClassificationOverview.png)
 
 
 You can use the [editor on GitHub](https://github.com/cbutkus/CS766/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
