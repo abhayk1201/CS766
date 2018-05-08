@@ -78,11 +78,16 @@ The HOG feature extractor works as follows. Break up image into cells. For each 
 
 ![Image](https://cbutkus.github.com/CS766/HOG.png)
 
-## Bag of Visual Words
+## Bag of Visual Words Model
 
 Bag of words is a popular model used in natural language processing. It made it's way over to Computer Vision. It works in a similiar way, for natural language processing it treats each word in the document and counts the number of occurances of that word in that documents. This is done for all words in the document and quantitzed histogram is created to represent the document. This feature is then used to classify. The same thing is done here. The diagram below outlines the process for the Bag of Visual Word model.
 
 ![Image](https://cbutkus.github.com/CS766/BOVW.png)
+
+## A More General Bag of Visual Words Model - Fisher Vector Encoding
+
+A more general version of the Bag of Visual Words is to use Fisher Vector Encoding. In teh Bag of Visual Words model we used a K-means algorithm to build our words in the model. The problem with this approach is that all feature vectors that are being indexed to the word dictionary only get back the word that is "closest" to it. It doesn't take into account how close it is or how close it is to other words. You can think of the Fisher Vector as probabilistic vocabulary. It is similar to the code book generation as K-means but the Fisher Vector code book stores more information. Where as K-means code book stores just the closest word, Fisher Vector stores the first and second order statistics . The dimension of the Fisher Vector is 2KD, where K is the number of mixture components and D is the dimension of your feature vector, for SIFT D = 128. 
+
 
 ## Baseline Results
 
