@@ -98,6 +98,13 @@ The idea is to use Gaussian Mixture Model (GMM) on each picture to obtain circle
 
 ![Image](https://cbutkus.github.com/CS766/shapeOfGaussian.png)
 
+## Results
+
+GMM feature vector I played with produced poor results. The accuracy achieved was only in the 25% range. I also used the GMM descriptor and created a dual code book with the other methods described in the baseline models and the accuracy only increased marginally. Unfortunately none of feature vectors I played with outside the baseline model produced accuracies above 25%.
+
+
+
+
 You can use the [editor on GitHub](https://github.com/cbutkus/CS766/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
