@@ -5,7 +5,7 @@
 
 ## Summary Statement
 
-Image classification is the task of taking an image and producing a label that classifies the image. For example given a picture of dog we would like the image classification algorithm to produce the label ‘dog’. This is important problem in computer vision becuase it aids in image searching and retreval. Since 2011 image classification has been dominated by deep nets. The improvment in model precision was dramatic. For instance, before the deepnet era, state of the art image classification algorithms were achieving 70-80 percent accuracy on predicitions on well know test sets. On these same test sets, deep nets were achiveing precision figures above 90 percent.
+Image classification is the task of taking an image and producing a label that classifies the image. For example given a picture of dog we would like the image classification algorithm to produce the label ‘dog’. This is important problem in computer vision because it aids in image search and retrieval. Since 2011, image classification has been dominated by deep nets. The improvement in model precision was dramatic. For instance, before the deep net era, state of the art image classification algorithms were achieving 70-80 percent accuracy on predications on well known test sets in the computer vision community. On these same test sets, deep nets were achieving precision figures above 90 percent.
 
 With that said I choose to go back in time to learn and implement the models before the deep net revolution. I choose to do this for 3 reasons:
 
@@ -13,7 +13,8 @@ With that said I choose to go back in time to learn and implement the models bef
 2. I wanted to run code on my own laptop. Deep nets require way too much computing time.
 3. I wanted to learn the models that were state of the art pre-deep net era.
 
-My goal was two fold. One, learn about and then implement the models that were commonly used before deep nets. Two, try a new technique to see if I can improve the precision of the older models.
+My goal was twofold. One, learn about and then implement the models that were commonly used before deep nets dominance. Two, try a new technique to see if I can improve the precision of the older models.
+
 
 ## Dataset to Benchmark Model Performance
  
