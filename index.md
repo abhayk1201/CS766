@@ -94,7 +94,9 @@ After going through the standard algortims that existed back in 2010 I wanted to
 
 ![Image](https://cbutkus.github.com/CS766/DogAndCirlces.png)
 
+The idea is to use Gaussian Mixture Model (GMM) on each picture to obtain circle/ellipsoid shapes that capture a rough geometry of the image. Fitting a GMM to each image you can obtain the center location of the each gaussian along with its relative center location to other gaussian variables as well as its shape based on the covariance matrix. This is encoded into a feature vector by placing the mean vector of each Gaussian followed by the upper triangular covariance matrix of each Gaussian. The order of stacking was chosen by largest to smallest area covered by each Gaussian. To calculate the area covered I took the variance of x-coordinate multiplied by the variance of the y-coordinate. The Gaussian Mixture Model was fit for each image. The results presented are with 20 Gaussian variables estimated with data of size n x 3. Where n is the number of pixels in the image and 3 is the {x-coordinate, y-coordinate, pixel intensity} normalized.
 
+![Image](https://cbutkus.github.com/CS766/shapeOfGaussian.png)
 
 You can use the [editor on GitHub](https://github.com/cbutkus/CS766/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
