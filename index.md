@@ -80,7 +80,7 @@ The HOG feature extractor works as follows. Break up image into cells. For each 
 
 ## Bag of Visual Words
 
-
+Bag of words is a popular model used in natural language processing. It made it's way over to Computer Vision. It works in a similiar way, for natural language processing it treats each word in the document and counts the number of occurances of that word in that documents. This is done for all words in the document and quantitzed histogram is created to represent the document. This feature is then used to classify. The same thing is done here. The diagram below outlines the process for the Bag of Visual Word model.
 
 ![Image](https://cbutkus.github.com/CS766/BOVW.png)
 
