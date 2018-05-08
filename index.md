@@ -39,17 +39,30 @@ In this project I used the following classifaction algorithms:
 1. Nearest Neighbor
 2. Support Vector Machine (SVM)
 
-### Neaarest Neighbor
+### Nearest Neighbor
 
 The nearest neighbor classifier is a very simple algorithm. At a highlevel, it works as follows. You provide the trainning set of D-dimensional feature vectors with labels. Then you query the algorithm by asking it to classify some D-dimensional feature vector. The algorithm finds the "closest" neighbor to this query. It then returns the majority class of K neighbors, where K is an input parameter. For instance if K = 1 you only return the closest neighbor. If K= 5 then those 5 neighbors get to vote with their label based on some weighting scheme of their votes. The image below depicts the nearest neighbor algorithm.
 
 ![Image](https://cbutkus.github.com/CS766/NN.png)
 
-### Suport Vector Machine (SVM)
+### Support Vector Machine (SVM)
 
 SVM are also simple to understand. Like the nearest neighbor algorithm, the SVM algoritm receives a trainning set of D-dimensional feature vectors with labels. The algorithm then finds a set of hyperplanes, (those are lines when the feature fector is 2-dimensional) that maximizes the margin around labels of one class vs the other class. The image below depicts what the SVM is doing.
 
 ![Image](https://cbutkus.github.com/CS766/SVM.png)
+
+## The Feature Extractors
+
+In this project I used the following feature extractor algorithms:
+
+1. Reduced Size Image
+2. Scale-Invarient Feature Transform (SIFT)
+3. Histogram of Oriented Gradients (HOG)
+
+### Reduced Size Image
+
+Couldn't be simplier. You take the image of 32x32 size and shrink it down. For my testing purposes I reduced the size to 16x16. Then created a feature vector by stacking each column into an array of size 256. Then I ran this through the two classifiers described above.
+
 
 
 You can use the [editor on GitHub](https://github.com/cbutkus/CS766/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
