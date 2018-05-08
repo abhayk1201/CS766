@@ -72,6 +72,12 @@ The SIFT algorithm is bit more involved and little harder to explain at a high l
 
 ![Image](https://cbutkus.github.com/CS766/SIFT.png)
 
+### HOG
+
+The HOG feature extractor works as follows. Break up image into cells. For each cell compute the orientations at each pixel. This is typically done at each pixel by calculating the gradient in the x direction by [-1 0 1] and in the y direction by [-1 0 1]’. With the gradient calculated you can calculate the orientation. Within each cell accumulate each bin, angle of orientation, by the magnitude gradient for each pixel. Typically 9 bins per cell: 0-20degrees, 20-40degrees, …, 160-180degrees. Combine histogram entries into one feature vector
+
+![Image](https://cbutkus.github.com/CS766/HOG.png)
+
 
 You can use the [editor on GitHub](https://github.com/cbutkus/CS766/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
