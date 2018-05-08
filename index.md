@@ -63,7 +63,7 @@ In this project I used the following feature extractor algorithms:
 
 Couldn't be simplier. You take the image of 32x32 size and shrink it down. For my testing purposes I reduced the size to 16x16. Then created a feature vector by stacking each column into an array of size 256. Then I ran this through the two classifiers described above.
 
-
+![Image](https://cbutkus.github.com/CS766/SmallImage.png)
 
 You can use the [editor on GitHub](https://github.com/cbutkus/CS766/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
