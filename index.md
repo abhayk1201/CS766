@@ -14,7 +14,7 @@ With that said I choose to go back in time to learn and implement the models bef
 
 My goal was two fold. One, learn about and then implement the models that were commonly used before deep nets. Two, try a new technique to see if I can improve the precision of the older models.
 
- ## Dataset to Benchmark Model Performance
+ ### Dataset to Benchmark Model Performance
  
  For this project I made use of publicly available data set CIFAR-10 of labeled images. The dataset contains 10 classes (shown in image below), 50,000 images for training (32x32 color images), 10,000 images for testing (32x32 color images).
 
