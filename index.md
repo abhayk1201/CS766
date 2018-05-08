@@ -1,6 +1,6 @@
 ## Image Classification - Without Deep Nets
  Colin Butkus
-
+May 7, 2018
 
 ## Summary Statement
 
