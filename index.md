@@ -28,9 +28,21 @@ My goal was two fold. One, learn about and then implement the models that were c
 
 ## Image Classification Framework
 
-The process works as follows. Collect a large dataset of images with labels attached to them. In this case we are using the CIFAR-10 dataset. You extract features from your dataset. That is for each image create a 1-D vector of numbers that "describes" the image. You then break up your data into a training set and test set. The trainning set is used to tune your model. The test set is only used at the end to measure how well the model you trainned actually predicts the correct label on a image that was never scene before by the model.
+The process works as follows. Collect a large dataset of images with labels attached to them. In this case we are using the CIFAR-10 dataset. You extract features from your dataset. That is for each image create a D-dimensional vector of numbers that "describes" the image. You then break up your data into a training set and test set. The trainning set is used to tune your model. The test set is only used at the end to measure how well the model you trainned actually predicts the correct label on a image that was never observed before by the model. The two parts to think about here are the algorithms used for Feature Creation and the algorithms used for Classifing. The algorithm that classifys the label of the images recieves as input, the output from the Feature Creation algoritm.
 
 ![Image](https://cbutkus.github.com/CS766/ClassificationOverview.png)
+
+## The Classifiers
+
+In this project I used the following classifaction algorithms:
+
+1. Nearest Neighbor
+2. Support Vector Machine (SVM)
+
+### Neearest Neighbor
+
+The nearest neighbor classifier is a very simple algorithm. At a highlevel, it works as follows. You provide the trainning set of D-dimensional feature vectors with labels. Then you query the algorithm by asking it to classify some D-dimensional feature vector. The algorithm finds the "closest" neighbor to this query. It then returns the majority class of K neighbors, where K is an input parameter. For instance if K = 1 you only return the closest neighbor. If K= 5 then those 5 neighbors get to vote with their label based on some weighting scheme of their votes. The image below depicts the nearest neighbor algorithm.
+
 
 
 You can use the [editor on GitHub](https://github.com/cbutkus/CS766/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
