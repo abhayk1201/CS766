@@ -1,6 +1,7 @@
 ## Image Classification - Without Deep Nets
  Colin Butkus
-May 7, 2018
+ 
+ May 7, 2018
 
 ## Summary Statement
 
@@ -64,6 +65,13 @@ In this project I used the following feature extractor algorithms:
 Couldn't be simplier. You take the image of 32x32 size and shrink it down. For my testing purposes I reduced the size to 16x16. Then created a feature vector by stacking each column into an array of size 256. Then I ran this through the two classifiers described above.
 
 ![Image](https://cbutkus.github.com/CS766/SmallImage.png)
+
+### SIFT
+
+The SIFT algorithm is bit more involved and little harder to explain at a high level. But here goes, the algoritm is looking for "interesting points" in the image. The algorithm first creates an image space of various blurring and shrinken. For each level of blur the algortim finds local extrema. These are the interesting points. It then sets a neighborhood around the keypoints to calculate the orientation and magnitude of each point in that neighbor and assigns it to bins of orientations, 10%, 20% etc. Finally, the algorithm produces feature fectors by taking a 16x16 neighborhood around the keypoint and then breaking it into 16 sub-blocks of 4x4 size. For each sub-block, 8 bin orientation histogram is created. This produces a total of 128 binds of orientation for each interesting point. Our feature vector is 128 dimensions. For more details check out D. Lowe's paper: Distinctive Image Features from Scale-Invariant Keypoints, 2004". The paper is well written and easy to follow.
+
+![Image](https://cbutkus.github.com/CS766/SIFT.png)
+
 
 You can use the [editor on GitHub](https://github.com/cbutkus/CS766/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
