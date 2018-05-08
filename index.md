@@ -78,6 +78,15 @@ The HOG feature extractor works as follows. Break up image into cells. For each 
 
 ![Image](https://cbutkus.github.com/CS766/HOG.png)
 
+## Feature Enchancers
+
+
+
+## Baseline Results
+
+The results of the above described model is shown below. The accuracy column is showing % of the time the model is correctly predicting the label from the test set.
+
+![Image](https://cbutkus.github.com/CS766/BaselineResults.png)
 
 You can use the [editor on GitHub](https://github.com/cbutkus/CS766/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
