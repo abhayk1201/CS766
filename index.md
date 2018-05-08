@@ -49,7 +49,7 @@ The nearest neighbor classifier is a very simple algorithm. At a high-level, it 
 
 ### Support Vector Machine (SVM)
 
-SVM are also simple to understand. Like the nearest neighbor algorithm, the SVM algoritm receives a trainning set of D-dimensional feature vectors with labels. The algorithm then finds a set of hyperplanes, (those are lines when the feature fector is 2-dimensional) that maximizes the margin around labels of one class vs the other class. The image below depicts what the SVM is doing.
+SVM are also simple to understand. Like the nearest neighbor algorithm, the SVM algorithm receives a training set of D-dimensional feature vectors with labels. The algorithm then finds a set of hyperplanes, (those are lines when the feature vector is 2-dimensional) that maximizes the margin around labels of one class vs the other class. The image below depicts what the SVM is doing.
 
 ![Image](https://cbutkus.github.com/CS766/SVM.png)
 
@@ -63,7 +63,7 @@ In this project I used the following feature extractor algorithms:
 
 ### Reduced Size Image
 
-Couldn't be simplier. You take the image of 32x32 size and shrink it down. For my testing purposes I reduced the size to 16x16. Then created a feature vector by stacking each column into an array of size 256. Then I ran this through the two classifiers described above.
+Couldn't be simpler. You take the image of 32x32 size and shrink it down. For my testing purposes I reduced the size to 16x16. Then created a feature vector by stacking each column into an array of size 256. Then I ran this through the two classifiers described above.
 
 ![Image](https://cbutkus.github.com/CS766/SmallImage.png)
 
