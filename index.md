@@ -104,9 +104,9 @@ GMM feature vector I played with produced poor results. The accuracy achieved wa
 
 ## Takeaways
 
--The results achieved by Deep Nets are so impressive that likely little attention will be paid to the models explored in this project.
--Good news is that these models are much quicker to run then Deep Nets. Total computation time for most of the models reviewed is under 15 minutes using Matlab run on a 64bit machine with 3.3GHz processor and 8gb of RAM.
--Failed to find a different feature vector representation to beat the industry benchmarks.
--Baseline model feature vectors doesn’t account for spatial relationships. I thought I thought combing that with a GMM feature vector would help, but it didn’t.
--I enjoyed learning about the models discussed on this page. However, I left feeling disappointed that I couldn't find good feature vector encoding for spatial relationships in the image.
+*The results achieved by Deep Nets are so impressive that likely little attention will be paid to the models explored in this project.
+*Good news is that these models are much quicker to run then Deep Nets. Total computation time for most of the models reviewed is under 15 minutes using Matlab run on a 64bit machine with 3.3GHz processor and 8gb of RAM.
+*Failed to find a different feature vector representation to beat the industry benchmarks.
+*Baseline model feature vectors doesn’t account for spatial relationships. I thought I thought combing that with a GMM feature vector would help, but it didn’t.
+*I enjoyed learning about the models discussed on this page. However, I left feeling disappointed that I couldn't find good feature vector encoding for spatial relationships in the image.
 
