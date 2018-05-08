@@ -18,19 +18,19 @@ My goal was twofold. One, learn about and then implement the models that were co
 
 ## Dataset to Benchmark Model Performance
  
- For this project I made use of publicly available data set [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) of labeled images. The dataset contains 10 classes (shown in image below), 50,000 images for training (32x32 color images), 10,000 images for testing (32x32 color images).
+For this project I made use of a publicly available data set [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) of labeled images. The dataset contains 10 classes (shown in image below), 50,000 images for training (32x32 color images), 10,000 images for testing (32x32 color images).
 
 ![Image](https://cbutkus.github.com/CS766/CIFAR-10.png)
  
 ## State of the Art
  
- Deep Convolutional Neural Network has achieved over 95% accuracy on the CIFR-10 dataset. In comparison humans achieve classification accuracy of 95%. The reasons humans don't achieve 100% accuracy is becuase of the low resolution of the images in the data set. For pre-Deep Net models accuracy on this dataset was in the 80% range. The image below is high level schmatic of deep nets on image classification.
+Deep Convolutional Neural Networks have achieved over 95% accuracy on the CIFR-10 dataset. In comparison humans achieve classification accuracy of 95%. The reasons humans don't achieve 100% accuracy is because of the low resolution of the images in the data set. For pre-Deep Net models accuracy on this dataset was in the 80% range. The image below is high level schematic of deep nets on image classification.
  
  ![Image](https://cbutkus.github.com/CS766/DeepNet.png)
 
 ## Image Classification Framework
 
-The process works as follows. Collect a large dataset of images with labels attached to them. In this case we are using the CIFAR-10 dataset. You extract features from your dataset. That is for each image create a D-dimensional vector of numbers that "describes" the image. You then break up your data into a training set and test set. The trainning set is used to tune your model. The test set is only used at the end to measure how well the model you trainned actually predicts the correct label on a image that was never observed before by the model. The two parts to think about here are the algorithms used for Feature Creation and the algorithms used for Classifing. The algorithm that classifys the label of the images recieves as input, the output from the Feature Creation algoritm.
+The process works as follows. Collect a large dataset of images with labels attached to them. In this case we are using the CIFAR-10 dataset. You extract features from your dataset. That is for each image create a D-dimensional vector of numbers that "describes" the image. You then break up your data into a training set and a test set. The training set is used to tune your model. The test set is only used at the end to measure how well the model you trained actually predicts the correct label of a image that was never observed before by the model. The two parts to think about here are the algorithms used for Feature Creation and the algorithms used for Classifying. The algorithm that classifies the label of the images receives as input, the output from the Feature Creation algorithm.
 
 ![Image](https://cbutkus.github.com/CS766/ClassificationOverview.png)
 
