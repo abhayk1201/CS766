@@ -2,7 +2,7 @@
  Colin Butkus
 
 
-# Summary Statement
+## Summary Statement
 
 Image classification is the task of taking an image and producing a label that classifies the image. For example given a picture of dog we would like the image classification algorithm to produce the label ‘dog’. This is important problem in computer vision becuase it aids in image searching and retreval. Since 2011 image classification has been dominated by deep nets. The improvment in model precision was dramatic. For instance, before the deepnet era, state of the art image classification algorithms were achieving 70-80 percent accuracy on predicitions on well know test sets. On these same test sets, deep nets were achiveing precision figures above 90 percent.
 
@@ -14,17 +14,17 @@ With that said I choose to go back in time to learn and implement the models bef
 
 My goal was two fold. One, learn about and then implement the models that were commonly used before deep nets. Two, try a new technique to see if I can improve the precision of the older models.
 
- ## Dataset to Benchmark Model Performance
+## Dataset to Benchmark Model Performance
  
  For this project I made use of publicly available data set CIFAR-10 of labeled images. The dataset contains 10 classes (shown in image below), 50,000 images for training (32x32 color images), 10,000 images for testing (32x32 color images).
 
 ![Image](https://cbutkus.github.com/CS766/CIFAR-10.png)
  
- ### State of the Art
+## State of the Art
  
  Deep Convolutional Neural Network has achieved over 95% accuracy on the CIFR-10 dataset. In comparison humans achieve classification accuracy of 95%. The reasons humans don't achieve 100% accuracy is becuase of the low resolution of the images in the data set. For pre-Deep Net models accuracy on this dataset was in the 80% range. The image below is high level schmatic of deep nets on image classification.
  
- ![Image](https://cbutkus.github.com/CS766/DeepNets.png)
+ ![Image](https://cbutkus.github.com/CS766/DeepNet.png)
 
 You can use the [editor on GitHub](https://github.com/cbutkus/CS766/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
