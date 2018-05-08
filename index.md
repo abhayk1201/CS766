@@ -75,19 +75,19 @@ The SIFT algorithm is bit more involved and little harder to explain at a high l
 
 ### HOG
 
-The HOG feature extractor works as follows. Break up image into cells. For each cell compute the orientations at each pixel. This is typically done at each pixel by calculating the gradient in the x direction by [-1 0 1] and in the y direction by [-1 0 1]’. With the gradient calculated you can calculate the orientation. Within each cell accumulate each bin, angle of orientation, by the magnitude gradient for each pixel. Typically 9 bins per cell: 0-20degrees, 20-40degrees, …, 160-180degrees. Combine histogram entries into one feature vector
+The HOG feature extractor works as follows. Break up image into cells. For each cell compute the orientations at each pixel. This is typically done at each pixel by calculating the gradient in the x direction by [-1 0 1] and in the y direction by [-1 0 1]’. With the gradient calculated you can calculate the orientation. Within each cell accumulate each bin, angle of orientation, by the magnitude gradient for each pixel. Typically 9 bins per cell: 0-20degrees, 20-40degrees, …, 160-180degrees. Combine histogram entries into one feature vector.
 
 ![Image](https://cbutkus.github.com/CS766/HOG.png)
 
 ## Bag of Visual Words Model
 
-Bag of words is a popular model used in natural language processing. It made it's way over to Computer Vision. It works in a similiar way, for natural language processing it treats each word in the document and counts the number of occurances of that word in that documents. This is done for all words in the document and quantitzed histogram is created to represent the document. This feature is then used to classify. The same thing is done here. The diagram below outlines the process for the Bag of Visual Word model.
+Bag of words is a popular model used in natural language processing. It made its way over to Computer Vision. It works in a similar way, for natural language processing it counts the number of occurrences of that word in that document. This is done for all words in the document and a quantized histogram is created to represent the document. This feature vector is then used to classify the document. The same thing is done here but we are using visual words. The diagram below outlines the process for the Bag of Visual Word model.
 
 ![Image](https://cbutkus.github.com/CS766/BOVW.png)
 
 ## A More General Bag of Visual Words Model - Fisher Vector Encoding
 
-A more general version of the Bag of Visual Words is to use Fisher Vector Encoding. In teh Bag of Visual Words model we used a K-means algorithm to build our words in the model. The problem with this approach is that all feature vectors that are being indexed to the word dictionary only get back the word that is "closest" to it. It doesn't take into account how close it is or how close it is to other words. You can think of the Fisher Vector as probabilistic vocabulary. It is similar to the code book generation as K-means but the Fisher Vector code book stores more information. Where as K-means code book stores just the closest word, Fisher Vector stores the first and second order statistics . The dimension of the Fisher Vector is 2KD, where K is the number of mixture components and D is the dimension of your feature vector, for SIFT D = 128. 
+A more general version of the Bag of Visual Words is to use Fisher Vector Encoding. In the Bag of Visual Words model we used a K-means algorithm to build our words in the model. The problem with this approach is that all feature vectors that are being indexed to the word dictionary only get back the word that is "closest" to it. It doesn't take into account how close it is or how close it is to other words. You can think of the Fisher Vector as probabilistic vocabulary. It is similar to the code book generation as K-means but the Fisher Vector code book stores more information. Whereas K-means code book stores just the closest word, Fisher Vector stores the first and second order statistics . The dimension of the Fisher Vector is 2KD, where K is the number of mixture components and D is the dimension of your feature vector, for SIFT D = 128.
 
 ![Image](https://cbutkus.github.com/CS766/Fisher.png)
 
@@ -100,11 +100,11 @@ The results of the above described model is shown below. The accuracy column is 
 
 ## Trying Something Different
 
-After going through the standard algortims that existed back in 2010 I wanted to try and see if can improve upon the accuracy achieved on my test set. I was planning to do this by creating a novel feature vector. The vector vectors used so far are all local features and don't account for spatial realationship across the image. My thought was track a rough geometry of the image by using a Gaussian Mixture Model (GMM). See picture below for example. 
+After going through the standard algorithms that existed back in 2010 I wanted to try and see if can improve upon the accuracy achieved on my test set. I was planning to do this by creating a novel feature vector. The feature vectors used so far were all local features , they don't account for spatial relationships in the object. My thought was represent a rough geometry of the image by using a Gaussian Mixture Model (GMM). See picture below for example.
 
 ![Image](https://cbutkus.github.com/CS766/DogAndCircles.png)
 
-The idea is to use a Gaussian Mixture Model (GMM) on each picture to obtain circle/ellipsoid shapes that capture a rough geometry of the image. Fitting a GMM to each image you can obtain the center location of each gaussian along with its relative center location to all other gaussian variables as well as its shape based on the covariance matrix. This is encoded into a feature vector by placing the mean vector of each Gaussian followed by the upper triangular covariance matrix of each Gaussian. The order of stacking was chosen by largest to smallest area covered by each Gaussian. To calculate the area covered I took the variance of x-coordinate multiplied by the variance of the y-coordinate. The Gaussian Mixture Model was fit for each image. The results presented are with 20 Gaussian variables estimated with data of size n x 3. Where n is the number of pixels in the image and 3 is the {x-coordinate, y-coordinate, pixel intensity} normalized.
+The idea is to use a Gaussian Mixture Model (GMM) on each picture to obtain circle/ellipsoid shapes that capture a rough geometry of the image. Fitting a GMM to each image you can obtain the center location of each Gaussian along with its relative center location to all other Gaussian variables as well as its shape based on the covariance matrix. This is encoded into a feature vector by placing the mean vector of each Gaussian followed by the upper triangular covariance matrix of each Gaussian. The order of stacking was chosen by largest to smallest area covered by each Gaussian. To calculate the area covered I took the variance of x-coordinate multiplied by the variance of the y-coordinate. The Gaussian Mixture Model was fit for each image. The results presented are with 20 Gaussian variables estimated with data of size n x 3. Where n is the number of pixels in the image and 3 is the {x-coordinate, y-coordinate, pixel intensity} normalized.
 
 ![Image](https://cbutkus.github.com/CS766/shapeOfGaussian.png)
 
