@@ -49,7 +49,7 @@ The nearest neighbor classifier is a very simple algorithm. At a highlevel, it w
 
 SVM are also simple to understand. Like the nearest neighbor algorithm, the SVM algoritm receives a trainning set of D-dimensional feature vectors with labels. The algorithm then finds a set of hyperplanes, (those are lines when the feature fector is 2-dimensional) that maximizes the margin around labels of one class vs the other class. The image below depicts what the SVM is doing.
 
-
+![Image](https://cbutkus.github.com/CS766/SVM.png)
 
 
 You can use the [editor on GitHub](https://github.com/cbutkus/CS766/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
