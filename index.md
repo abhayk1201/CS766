@@ -14,11 +14,18 @@ With that said I choose to go back in time to learn and implement the models bef
 
 My goal was two fold. One, learn about and then implement the models that were commonly used before deep nets. Two, try a new technique to see if I can improve the precision of the older models.
 
+ # Dataset to Benchmark Model Performance
+ 
+ For this project I made use of publicly available data set CIFAR-10 of labeled images. The dataset contains 10 classes (shown in image below), 50,000 images for training (32x32 color images), 10,000 images for testing (32x32 color images).
+
+![Image](https://cbutkus.github.com/CS766/CIFAR-10.png)
+ 
+ 
 You can use the [editor on GitHub](https://github.com/cbutkus/CS766/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-![Image](https://cbutkus.github.com/CS766/CIFAR-10.png)
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
