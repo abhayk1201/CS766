@@ -88,6 +88,14 @@ The results of the above described model is shown below. The accuracy column is 
 
 ![Image](https://cbutkus.github.com/CS766/BaselineResults.png)
 
+## Trying Something Different
+
+After going through the standard algortims that existed back in 2010 I wanted to try and see if can improve upon the accuracy achieved on my test set. I was planning to do this by creating a novel feature vector. The vector vectors used so far are all local features and don't account for spatial realationship across the image. My thought was track a rough geometry of the image by using Gaussian Mixture Model (GMM). See picture below for example. If we can also encode a set of ellipses through the image with some of the above methods the classifier would better be able to disbriminate the objects in the picture.
+
+![Image](https://cbutkus.github.com/CS766/DogAndCirlces.png)
+
+
+
 You can use the [editor on GitHub](https://github.com/cbutkus/CS766/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
